@@ -40,7 +40,7 @@ async def create_item(item: Item):
     #json1 = {"record_id":str(df.record_id[]),"geocode_point":df.geocode_point,"building_id":df.building_id}
     
     #data = json.dumps(out)
-    data1 = json.loads(out.replace("\'", '"'))
+    data1 = json.loads(out)
     
     
     #print(type(data))
@@ -95,7 +95,7 @@ async def create_item(item: Item):
     #json1 = {"record_id":str(df.record_id[]),"geocode_point":df.geocode_point,"building_id":df.building_id}
     
     #data = json.dumps(out)
-    data1 = json.loads(df_output.replace("\'", '"'))
+    data1 = json.loads(df_output)
     
 
     json_data = {"transactions_count": int(df1.count1[0]), "average_price_persqft": int(df2.avg[0]), 'transactions': data1}
